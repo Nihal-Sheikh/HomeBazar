@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Main UI';
-    src: url('BebasNeue-Regular.ttf');
+    src: url('./BebasNeue-Regular.ttf');
 }
 
 html {
