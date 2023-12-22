@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAO PABEN.COM</title>
+</head>
+<body>
+    <link rel="stylesheet" href="./shopstyle.css">
+    <div id="topBar">
+        <div id="textBox">
+            <ul id="navbarText">
+                <h1 id="home">Home</h1>
+                <h1 id="shop">Shop</h1>
+                <h1 id="about">About</h1>
+            </ul>
+            <h1 id="companyLogo">HomeBazar.com</h1>
+        </div>
+        <div id="hamberger" onclick="leftBoxSlide()">
+            <div class="hamberger"></div>
+            <div class="hamberger"></div>
+            <div class="hamberger"></div>
+        </div>
+    </div>
+    
+    <div id="leftBox">
+        <button type="button" id="closeButtonSideBar" onclick="leftBoxSlideReset()">&#10006</button>
+    </div>
+    <div id="backgroundFade" onclick="leftBoxSlideReset()"></div>
+    <script src="./shopjavascript.js"></script>
+</body>
+</html>

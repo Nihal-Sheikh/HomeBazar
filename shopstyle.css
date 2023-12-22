@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Main UI';
+    src: url('BebasNeue-Regular.ttf');
+}
+
+html {
+    margin: none;
+    padding: none;
+}
+body {
+    margin: none;
+    padding: none;
+}
+#topBar {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 9vh;
+    z-index: 10;
+    background-color: #f5f5f5;
+}
+#textBox {
+    justify-content: center;
+    transform: translate(2%,-20%);    
+}
+#navbarText {
+    display: flex;
+    justify-content: center;
+    transform: translate(0%,-12%);   
+}
+#home {
+    font-family: 'Main Ui',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 6.5vh;
+    flex-basis: 10%;
+    color: #050505;
+}
+#shop {
+    font-family: 'Main Ui',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 6.5vh;
+    flex-basis: 9%;
+    color: #050505;
+}
+#about {
+    font-family: 'Main Ui',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 6.5vh;
+    color: #050505;
+}
+#hamberger {
+    position: fixed;
+    height: 6rem;
+    width: 6rem;
+    z-index: 11;
+    top: 1.5%;
+    left: 0.5%;
+}
+.hamberger {
+    width: 5vh;
+    height: 0.7vh;
+    background-color: #050505;
+    margin: 1vh;
+    z-index: 14;
+    border-radius: 3px;
+}
+#leftBox {
+    position: fixed;
+    background-color: #efefef;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 400px;
+    z-index: 15;
+    transform: translate(-100%,0%);
+}
+#backgroundFade {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.0);
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 13;
+    visibility: hidden;
+}
+#companyLogo {
+    position: fixed;
+    visibility: hidden;
+    font-family: 'Main Ui',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 6.5vh;
+    top: 1vh;
+    left: 43vw;
+    transform: translate(0%,-38%);
+}
+
+#closeButtonSideBar {
+    position: relative;
+    border: none;
+    left: 89%;
+    font-size: 2rem;
+
+}
+@media (max-width: 35em) {
+    #textBox {
+        visibility: hidden;
+    }
+    #companyLogo {
+        visibility: visible;
+    }
+}
+button {
+    transition: all 0.2s ease;
+}
+button:active {
+    transform: scale(0.92);
+}
