@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeBazar.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./homestyle.css">
+</head>
+<body>
+    <nav id="topBar">
+        <div id="textBox">
+                <h1 id="about" onpointerenter="hoverMenuDown(hoverMenuAbout)" onpointerleave="resetHoverMenuDown(hoverMenuAbout)"><i onpointerenter="hoverMenuDown(hoverMenuAbout)" onpointerleave="resetHoverMenuDown(hoverMenuAbout)" id="navbarAbourIcon" class="fa fa-info-circle"></i> About</h1>
+                <h1 id="shop" onpointerenter="hoverMenuDown(hoverMenuShop)" onpointerleave="resetHoverMenuDown(hoverMenuShop)"><i onpointerenter="hoverMenuDown(hoverMenuShop)" onpointerleave="resetHoverMenuDown(hoverMenuShop)" id="navbarShopIcon" class="fa fa-shopping-cart"></i> Shop</h1>
+                <h1 id="home"><i id="navbarHomeIcon" class="fa fa-home"></i> Home</h1>
+        </div>
+        <h1 id="companyLogo">HomeBazar.com</h1>
+        <div id="hamberger" onclick="leftBoxSlide()">
+            <div class="hamberger"></div>
+            <div class="hamberger"></div>
+            <div class="hamberger"></div>
+        </div>
+        <img src="./UI/Logo2.png" id="iconNavbar"  alt="pic">
+    </nav>
+    <div id="hoverMenuShop" onpointerenter="cancelLeave(hoverMenuShop)" onpointerleave="resetCancelLeave(hoverMenuShop)">
+        <h1 class="listItems">Shopping</h1>
+        <h1 class="listItems">Exchange</h1>
+        <h1 class="listItems">Servicing</h1>
+    </div>
+    <div id="hoverMenuAbout" onpointerenter="cancelLeave(hoverMenuAbout)" onpointerleave="resetCancelLeave(hoverMenuAbout)">
+        <h1 class="listItems">About Us</h1>
+        <h1 class="listItems">Contact Us</h1>
+    </div>
+    <div id="leftBox">
+        <button type="button" id="closeButtonSideBar" onclick="leftBoxSlideReset()">&#10006</button>
+        <div id="sidebarText">
+            <h1 id="sidebarHome" class="sideBar"><i id="homeIcon" class="fa fa-home"></i> Home</h1>
+            <h1 id="sidebarShop" class="sideBar" onclick="collapseMenuRequest(subContentShop)"><i id="shopIcon" class="fa fa-shopping-cart" onclick="collapseMenuRequest(subContentShop)"></i> Shop<div id="collapseLeftShop" class="collapse"></div><div id="collapseRightShop" class="collapse"></div></h1>
+            <h1 class="sideBarSubContentsShop">Shopping</h1>
+            <h1 class="sideBarSubContentsShop">Exchange</h1>
+            <h1 class="sideBarSubContentsShop">Servicing</h1>
+            <h1 id="sidebarAbout" class="sideBar" onclick="collapseMenuRequest(subContentAbout)"><i id="aboutIcon" class="fa fa-info-circle" onclick="collapseMenuRequest(subContentAbout)"></i> About<div id="collapseLeftAbout" class="collapse"></div><div id="collapseRightAbout" class="collapse"></div></h1>
+            <h1 class="sideBarSubContentsAbout">About Us</h1>
+            <h1 class="sideBarSubContentsAbout">Contact Us</h1>
+        </div>
+    </div>
+    <main id="content">
+        <section id="greetings">
+            <header><h1 class="headerText">Welcome to HomeBazar</h1></header>
+            <footer><h6 class="paragraph">Bangladesh's Pride in Online Marketplaces! Your go-to platform for hassle-free transactions - easily buy, sell, exchange, and service your favorite items with confidence.
+            Immerse yourself in a world of convenience and top-notch customer support, making your online journey extraordinary. Discover HomeBazar.com, your preferred destination for seamless and delightful shopping experiences in Bangladesh!</h6></footer>
+            <div id="item1"class="shopItems"></div>
+            <div class="curveBottom">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+        <section id="topItems">
+            <header>
+                <h1 class="headerText">Trending Items</h1>
+            </header>
+            <div class="itemsContainer">
+                <figure class="shopItems">
+                    <img src="./Images/Bag Of Rice.jpg" alt="Shop">
+                    <figcaption>Rice 1KG <span class="crossedOut">65</span><span class="realPrice"> 60</span><span class="taka">৳</span></figcaption>
+                </figure>
+                <figure class="shopItems">
+                    <img src="./Images/Bread.jpg" alt="Shop">
+                    <figcaption>Bread 5pcs <span class="crossedOut">20</span><span class="realPrice"> 15</span><span class="taka">৳</span></figcaption>
+                </figure>
+                <figure class="shopItems">
+                    <img src="./Images/Burger.jpg" alt="Shop">
+                    <figcaption>Burger 1pcs <span class="crossedOut">100</span><span class="realPrice"> 90</span><span class="taka">৳</span></figcaption>
+                </figure>
+                <figure class="shopItems"> 
+                    <img src="./Images/Cheese.jpg" alt="Shop">
+                    <figcaption>Cheese 200grams <span class="crossedOut">200</span><span class="realPrice"> 160</span><span class="taka">৳</span></figcaption>
+                </figure>
+                <figure class="shopItems">
+                    <img src="./Images/Chicken Biryani.jpg" alt="Shop">
+                    <figcaption>Chicken Biryani <span class="crossedOut">200</span><span class="realPrice"> 160</span><span class="taka">৳</span></figcaption>
+                </figure>
+                <figure class="shopItems">
+                    <img src="./Images/Flour.jpg" alt="Shop">
+                    <figcaption>Flour 1KG <span class="crossedOut">70</span><span class="realPrice"> 65</span><span class="taka">৳</span></figcaption>
+                </figure>
+                <figure class="shopItems">
+                    <img src="./Images/Lettuce.jpg" alt="Shop">
+                    <figcaption>Lettuce 1KG <span class="crossedOut">100</span><span class="realPrice"> 90</span><span class="taka">৳</span></figcaption>
+                </figure>
+                <figure class="shopItems">
+                    <img src="./Images/Pizza.jpg" alt="Shop">
+                    <figcaption>Pizza 9' <span class="crossedOut">200</span><span class="realPrice"> 160</span><span class="taka">৳</span></figcaption>
+                </figure>
+            </div>
+            
+        </section>
+    </main>
+    
+    <div id="backgroundFade" onclick="leftBoxSlideReset()"></div>
+    <script src="./homejavascript.js"></script>
+</body>
+</html>
